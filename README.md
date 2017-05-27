@@ -8,3 +8,4 @@ http://blog.csdn.net/lewif/article/category/5877637/2
 Android官方文档：关于mk文件使用，翻译链接
 http://www.cnblogs.com/leaven/archive/2011/01/25/1944688.html
 
+这一部分的事情要快点做，目的是快速整理cantv的编译和机型配置等
