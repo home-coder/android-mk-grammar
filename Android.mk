@@ -32,6 +32,11 @@ LOCAL_SRC_FILES := yang.c
 
 #LOCAL_CFLAGS
 
+#ifeq ($(MODEL_CONFIG), C43Pro)
+#	$(call inherit-product, cantv/build/Mstar348/cantv_Mstar348_C43Pro.mk)
+#endif
+
+
 #...
 
 include $(BUILD_SHARED_LIBRARY)
