@@ -20,6 +20,8 @@ endif
 #call
 #include
 
+#ifeq ($(BOARD), $(filter $(BOARD), 082B 082B_DTMB 082B_TVOS_DTMB))
+
 #LOCAL_PATH := $(call my-dir) -->冒号等于
 
 #LOCAL_C_INCLUDES -->为什么要有include
