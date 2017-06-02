@@ -7,7 +7,7 @@ LOCAL_SRC_FILES := yang.c
 #ifeq ($(strip $(BOARD_ALSA_AUDIO)),tiny) -->ifeq的使用, shell命令的调用
 EXIST_FILE:= $(shell test -f $(LOCAL_PATH)/echo_file && echo yes)
 ifeq ($(EXIST_FILE), yes)
-$(shell rm -af $(LOCAL_PATH)/echo_file)
+$(shell rm -f $(LOCAL_PATH)/echo_file)
 $(shell \
 	echo "yesyesyesyes" > $(LOCAL_PATH)/echo_file \
 )
@@ -33,6 +33,14 @@ $(info $(DAY))
 #sat sun
 
 #filter example 2
+MYVAR := mxq6 mxsl mxdl5 mx6q mx53ql
+$(info $(MYVAR))
+MYBOARD := $(filter mxq6 mx6q, $(MYVAR))
+$(info $(MYBOARD))
+
+ifeq ($(MYBOARD), mxq6 mx6q)
+$(info "ok test")
+endif
 
 #android.mk中: := +=  -->的用法场景，和区别
 
